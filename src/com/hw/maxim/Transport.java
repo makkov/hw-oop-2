@@ -1,6 +1,6 @@
 package com.hw.maxim;
 
-public abstract class Transport implements Serviceable {
+public abstract class Transport implements Serviceable, Utilizable {
 
     private final String modelName;
     private final int wheelsCount;
@@ -16,5 +16,10 @@ public abstract class Transport implements Serviceable {
 
     public int getWheelsCount() {
         return wheelsCount;
+    }
+
+    @Override
+    public void util() {
+        System.out.println(modelName + " Отправить под пресс");
     }
 }

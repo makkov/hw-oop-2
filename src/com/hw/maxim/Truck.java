@@ -15,4 +15,10 @@ public class Truck extends Car {
         super.doService();
         checkTrailer();
     }
+
+    @Override
+    public void util() {
+        System.out.println("снять колеса, распилить раму, отделить кабину");
+        super.util();
+    }
 }

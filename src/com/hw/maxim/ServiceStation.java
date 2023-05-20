@@ -21,4 +21,8 @@ public class ServiceStation {
     public void check(Serviceable serviceable) {
         serviceable.doService();
     }
+
+    public void util(Utilizable utilizable) {
+        utilizable.util();
+    }
 }

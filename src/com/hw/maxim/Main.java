@@ -17,13 +17,17 @@ public class Main {
         Bicycle bicycle2 = new Bicycle("bicycle2", 2);
         System.out.println();
 
-        System.out.println("Service station");
+//        System.out.println("Service station");
         ServiceStation station = new ServiceStation();
-        station.check(car);
-        station.check(car2);
-        station.check(bicycle);
-        station.check(bicycle2);
-        station.check(truck);
-        station.check(truck2);
+//        station.check(car);
+//        station.check(car2);
+//        station.check(bicycle);
+//        station.check(bicycle2);
+//        station.check(truck);
+//        station.check(truck2);
+
+        station.util(car);
+        station.util(bicycle);
+        station.util(truck);
     }
 }
