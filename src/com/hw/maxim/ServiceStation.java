@@ -1,25 +1,28 @@
 package com.hw.maxim;
 
 public class ServiceStation {
-    public void check(Car car, Bicycle bicycle, Truck truck) {
-        if (car != null) {
-            System.out.println("Обслуживаем " + car.modelName);
-            for (int i = 0; i < car.wheelsCount; i++) {
-                car.updateTyre();
-            }
-            car.checkEngine();
-        } else if (truck != null) {
-            System.out.println("Обслуживаем " + truck.modelName);
-            for (int i = 0; i < truck.wheelsCount; i++) {
-                truck.updateTyre();
-            }
-            truck.checkEngine();
-            truck.checkTrailer();
-        } else if (bicycle != null) {
-            System.out.println("Обслуживаем " + bicycle.modelName);
-            for (int i = 0; i < bicycle.wheelsCount; i++) {
-                bicycle.updateTyre();
-            }
-        }
+
+
+/*
+    вариант с перегрузкой:
+    public void check(Bicycle bicycle) {
+        bicycle.doService();
+    }
+
+    public void check(Car car) {
+        car.doService();
+    }
+
+    public void check(Truck truck) {
+        truck.doService();
+    }
+*/
+
+    public void check(Serviceable serviceable) {
+        serviceable.doService();
+    }
+
+    public void util(Utilizable utilizable) {
+        utilizable.util();
     }
 }
